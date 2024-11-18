@@ -9,11 +9,84 @@
     <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/perfil.css">
     <!-- Enlace a Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <style>
+        /* Medias Queries para Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                display: block; /* Para pantallas más pequeñas, colocar todo en una sola columna */
+            }
+
+            aside {
+                width: 100%; /* Hacer la barra lateral más pequeña */
+                display: none; /* Ocultar la barra lateral en móviles */
+            }
+
+            main {
+                width: 100%;
+            }
+
+            .containerProfile {
+                display: block;
+                padding: 10px;
+            }
+
+            .profile-details, .edit-details {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .profile-image {
+                width: 120px; /* Ajustar el tamaño de la imagen de perfil */
+                height: 120px;
+                margin: 0 auto;
+            }
+
+            .profile-details h2 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .profile-details p, .edit-details label {
+                font-size: 1rem;
+            }
+
+            .form-group input {
+                width: calc(100% - 30px); /* Asegurar que los inputs ocupen todo el espacio disponible */
+            }
+
+            .form-group button {
+                display: block;
+                margin-top: 5px;
+                width: 100%;
+            }
+
+            .sidebar {
+                display: none; /* No mostrar la barra lateral en pantallas pequeñas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile-details h2 {
+                font-size: 1.2rem;
+            }
+
+            .form-group input, .form-group button {
+                font-size: 0.9rem;
+            }
+
+            .profile-details p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Mueve el header dentro del body -->
-    
-
     <div class="container">
         <!-- Sección lateral izquierda -->
         <aside>
@@ -90,9 +163,7 @@
                 <!-- Sección de perfil a la izquierda -->
                 <div class="profile-details">
                     <img src="ihc_tf/Public/Assets/Img/daf.jpg" alt="Profile Picture" class="profile-image">
-                    <h2>Danna Alvarez
-
-                    </h2>
+                    <h2>Danna Alvarez</h2>
                     <p><i class="fas fa-calendar-alt"></i> User since 2021</p>
                     <p><i class="fas fa-envelope"></i> AndreowJS@gmail.com</p>
                     <p><i class="fas fa-phone"></i> +51 940 163 699</p>
