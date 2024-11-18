@@ -440,16 +440,20 @@ main{
 }
 
 
-main .form{
-   
-    margin-left: 7rem;
-    margin-top: 3rem;
+form {
+    width: 90%; /* Ajusta el ancho del formulario */
+    max-width: 1200px; /* Opcional, para limitar el tamaño en pantallas grandes */
+    margin: 3rem auto; /* Centra el formulario horizontalmente */
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 1.6rem 5rem;
-    
-    
-    
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem 5rem;
+}
+
+
+form > div {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos internos estén en columna */
+    gap: 1rem; /* Espaciado interno entre elementos */
 }
 
 main .welcome > div{
@@ -1005,7 +1009,7 @@ form {
         gap: 20px;
         display: flex;
 
-    }
+    }    
     .calculadora{
         width: 100%;
     }
