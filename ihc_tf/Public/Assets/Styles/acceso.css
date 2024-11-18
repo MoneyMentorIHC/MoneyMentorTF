@@ -26,6 +26,10 @@ input {
   top: 0;
   left: 0;
 }
+.social-icon {
+  cursor: pointer; /* Cambia el cursor a una mano al pasar el mouse */
+}
+
 
 .signin-signup {
   position: absolute;
