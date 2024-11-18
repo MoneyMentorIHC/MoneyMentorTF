@@ -14,25 +14,10 @@
             <img src="ihc_tf/Public/Assets/Img/logocortado.png">
         </div>
     </div>
-    <h2>Bienvenido(a)</h2>
 
 <!-- Right Section -->
 <div class="right-section">
     <div class="nav">
-        <button id="menu-btn">
-            <span class="material-icons-sharp">
-                menu
-            </span>
-        </button>
-        <div class="dark-mode">
-            <span class="material-icons-sharp active">
-                light_mode
-            </span>
-            <span class="material-icons-sharp">
-                dark_mode
-            </span>
-        </div>
-
         <div class="profile">
             <div class="info">
                 <p>Hola, <b>Andreow</b></p>
@@ -129,7 +114,7 @@
                     <div class="status">
                         <div class="info">
                             <h3>Mis ingresos</h3>
-                            <h1>S/600</h1>
+                            <h1 id="ingresoInicial">S/0</h1>
                         </div>
                         <div class="progresss">
                             <svg>
@@ -161,7 +146,7 @@
                     <div class="status">
                         <div class="info">
                             <h3>Mis gastos</h3>
-                            <h1>S/150</h1>
+                            <h1 id="egresoInicial">S/0</h1>
                         </div>
                         <div class="progresss">
                             <svg>
@@ -185,11 +170,11 @@
                 <div class="money-list">
                     <div class="money">
                         <h3>Ingresos</h3>
-                        <h1>S/600</h1>
+                        <h1 id="montoTotal">S/0</h1>
                     </div>
                     <div class="money">
                         <h3>Gastos</h3>
-                        <h1>S/360</h1>
+                        <h1 id="egresoTotal">S/0</h1>
                     </div>
 
                 </div>
@@ -202,7 +187,7 @@
                 <div class="cash-list">
                     <div class="cash">
                         <h3>Total</h3>
-                        <h1>S/240</h1>
+                        <h1 id="TotalRestado">S/0</h1>
                     </div>
 
                 </div>
@@ -287,8 +272,50 @@
 
     </div>
 
-    <script src="orders.js"></script>
-    <script src="index.js"></script>
+    
+    
+    <script>
+        // Recuperar el monto total de localStorage
+        const montoTotal = localStorage.getItem('montoTotal');
+        const ingresoInicial = localStorage.getItem('ingresoInicial');
+        // Actualizar el texto del <h3> si el monto existe
+        if (montoTotal) {
+          document.getElementById('montoTotal').textContent = `S/${montoTotal}`;
+        } else {
+          document.getElementById('montoTotal').textContent = 'S/0';
+        }
+
+        if (ingresoInicial) {
+          document.getElementById('ingresoInicial').textContent = `S/${ingresoInicial}`;
+        } else {
+          document.getElementById('IngresoInicial').textContent = 'S/0';
+        }
+
+        const egresoTotal = localStorage.getItem('egresoTotal');
+        const egresoInicial = localStorage.getItem('egresoInicial');
+
+        if (egresoInicial) {
+          document.getElementById('egresoInicial').textContent = `S/${egresoInicial}`;
+        } else {
+          document.getElementById('engresoInicial').textContent = 'S/0';
+        }
+        if (egresoTotal) {
+          document.getElementById('egresoTotal').textContent = `S/${egresoTotal}`;
+        } else {
+          document.getElementById('egresoTotal').textContent = 'S/0';
+        }
+
+        const TotalRestado = montoTotal - egresoTotal;
+
+        if(montoTotal && egresoTotal){
+            document.getElementById('TotalRestado').textContent = `S/${TotalRestado}`;
+        }
+        else{
+            document.getElementById('TotalRestado').textContent = 'S/0';
+        }
+
+
+    </script>
 </body>
 
 </html>
