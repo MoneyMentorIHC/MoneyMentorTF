@@ -777,7 +777,7 @@ header h2 {
     font-size: 2rem; /* Tamaño de fuente */
 }
 /* Ajustes del logo para ser más flexible en dispositivos pequeños */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1430px) {
     .container{
         width: 95%;
         grid-template-columns: 7rem auto 23rem;
@@ -832,176 +832,6 @@ header h2 {
     }
 
 }
-
-@media screen and (max-width: 768px) {
-    .container{
-        width: 100%;
-        grid-template-columns: 1fr;
-        padding: 0 var(--padding-1);
-    }
-
-    aside{
-        position: fixed;
-        background-color: var(--color-white);
-        width: 15rem;
-        z-index: 3;
-        box-shadow: 1rem 3rem 4rem var(--color-light);
-        height: 100vh;
-        left: -100%;
-        display: none;
-        animation: showMenu 0.4s ease forwards;
-    }
-
-    @keyframes showMenu {
-       to{
-        left: 0;
-       } 
-    }
-
-    aside .logo{
-        margin-left: 1rem;
-    }
-
-    aside .logo h2{
-        display: inline;
-    }
-
-    aside .sidebar h3{
-        display: inline;
-    }
-
-    aside .sidebar a{
-        width: 100%;
-        height: 3.4rem;
-    }
-
-    aside .sidebar a:last-child{
-        position: absolute;
-        bottom: 5rem;
-    }
-
-    aside .toggle .close{
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    main{
-        margin-top: 8rem;
-        padding: 0 1rem;
-    }
-
-    main .new-users .user-list .user{
-        flex-basis: 35%;
-    }
-
-    main .recent-orders{
-        position: relative;
-        margin: 3rem 0 0 0;
-        width: 100%;
-    }
-
-    main .recent-orders table{
-        width: 100%;
-        margin: 0;
-    }
-
-    .right-section{
-        width: 94%;
-        margin: 0 auto 4rem;
-    }
-
-    .right-section .nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-        align-items: center;
-        background-color: var(--color-white);
-        padding: 0 var(--padding-1);
-        height: 4.6rem;
-        width: 100%;
-        z-index: 2;
-        box-shadow: 0 1rem 1rem var(--color-light);
-        margin: 0;
-    }
-
-    .right-section .nav .dark-mode{
-        width: 4.4rem;
-        position: absolute;
-        left: 66%;
-    }
-
-    .right-section .profile .info{
-        display: none;
-    }
-
-    .right-section .nav button{
-        display: inline-block;
-        background-color: transparent;
-        cursor: pointer;
-        color: var(--color-dark);
-        position: absolute;
-        left: 1rem;
-    }
-
-    .right-section .nav button span{
-        font-size: 2rem;
-    }
-
-}
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    aside {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    main {
-        margin-left: 0;
-    }
-
-    .right-section {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .analyse, .new-money, .total-cash {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .money, .cash {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    .sidebar a h3 {
-        font-size: 14px;
-    }
-
-    .logo img {
-        width: 80px;
-    }
-
-    .profile-photo img {
-        width: 40px;
-    }
-
-    .user-profile .logo img {
-        width: 60px;
-    }
-
-    .sidebar a {
-        justify-content: flex-start;
-    }
-
-    .right-section {
-        padding: 10px;
-    }
-}
 /* Tabletas: entre 768px y 1024px */
 @media (max-width: 1024px) {
     .container {
@@ -1040,7 +870,7 @@ header h2 {
     }
 
     .right-section {
-        width: 300px;
+        width: 250px;
     }
 
     .money, .cash {
@@ -1070,20 +900,278 @@ header h2 {
 }
 
 /* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
+/*ADICIONALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL*/
+/*ADICIONALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL*/
+/*ADICIONALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL*/
+@media (max-width: 870px) {
+    aside {
+        display: none; /* Oculta el menú lateral completamente */
+    }
+    .container {
+        margin-left: 0; /* Elimina márgenes laterales */
+        padding-left: 0; /* Elimina padding del contenedor */
+        grid-template-columns: 1fr; /* Ajusta el diseño del contenedor */
+        padding-left: 0; /* Elimina cualquier espacio dejado por el aside */
+    }
+    .main{
+        margin: 0;
+        padding: 0.5px;
+    }
     header {
-        flex-wrap: wrap; /* Permite que los elementos dentro del header se ajusten */
+        display: flex;
+        flex-direction: row; /* Asegura que los elementos estén en una sola fila */
+        align-items: center; /* Centra verticalmente los elementos */
+        justify-content: space-between; /* Reduce el espacio entre ellos */
+        padding: 5px 10px; /* Reduce el padding interno del header */
+        gap: 3px; /* Reduce el espacio entre elementos */
     }
 
+    /* Ajustar el logo */
+    header .logo {
+        max-width: 80px; /* Reduce el tamaño del logo */
+        height: auto; /* Mantiene las proporciones */
+    }
+
+    /* Ajustar el texto "Hola Androw" */
+    header .welcome-text {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        margin-left: 500px; /* Reduce el espacio a la izquierda */
+    }
+
+    /* Ajustar el perfil y la foto */
+    header .profile {
+        display: flex;
+        align-items: center; /* Centra el texto y la foto */
+        gap: 5px; /* Reduce el espacio entre el nombre y la imagen */
+    }
+
+    header .profile img {
+        width: 30px; /* Reduce el tamaño de la imagen */
+        height: 30px; /* Hace la imagen cuadrada */
+        border-radius: 50%; /* Mantiene la forma circular */
+    }
+
+    /* Ajustar el icono (si está separado) */
+    header .icon {
+        display: none;
+        font-size: 0; /* Reduce el tamaño del ícono */
+        margin-left: 0px; /* Reduce el espacio a la izquierda */
+    }
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: flex-start; /* Alinear a la izquierda */
+        gap: 10px; /* Reducir espacio entre cuadros */
+        width: 100%; /* Asegurarse de ocupar todo el ancho disponible */
+    }
+    .analyse > div, 
+    .new-money .money, 
+    .total-cash .cash {
+        width: 70%; /* Reducir el ancho de los cuadros */
+        padding: 10px; /* Reducir padding interno */
+        margin: 0 auto; /* Centrar los cuadros */
+        transform: translateX(-10px); /* Desplazar ligeramente a la izquierda */
+    }
+
+    /* Reducir el tamaño del contenido dentro de los cuadros */
+    .analyse h3,
+    .new-money h3,
+    .total-cash h3 {
+        font-size: 0.7rem; /* Reducir tamaño del texto */
+    }
+
+    .analyse h1, 
+    .new-money h1, 
+    .total-cash h1 {
+        font-size: 1rem; /* Reducir encabezados */
+    }
+
+    .analyse .progresss, 
+    .new-money .progresss, 
+    .total-cash .progresss {
+        width: 50px; /* Reducir tamaño de los gráficos */
+        height: 50px;
+    }
+
+    .analyse .progresss svg circle {
+        stroke-width: 5; /* Reducir grosor del círculo */
+    }
+
+    .analyse .percentage,
+    .new-money .percentage,
+    .total-cash .percentage {
+        font-size: 0.8rem; /* Reducir tamaño del porcentaje */
+    }
+
+    .right-section {
+        width: 200px;
+    }
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .money, .cash {
+        width: 15%;
+    }
+
+    .sidebar a h3 {
+        font-size: 10px;
+    }
+    .material-icons-sharp,
+    .icon-class { /* Reemplaza `.icon-class` con la clase específica de tus íconos si no usas Material Icons */
+        height: 0px;
+        width: 0px;
+        margin-left: 0;
+    }
+    .material-icons-sharp.active{
+        height: 0px;
+        width: 0px;
+        margin-left: 0;
+    }
+    .material-icons-sharp:last-child{
+        height: 0px;
+        width: 0px;
+        margin-left: 0;
+    }
+}
+@media (max-width: 870px) {
+    .profile .info p {
+        font-size: 0.7rem; /* Reduce el tamaño del texto "Hola, Andreow" */
+        
+    }
+    .profile .info p b {
+        font-size: 0.7rem; /* Reduce el tamaño del nombre */
+        
+    }
+    .profile .info small {
+        font-size: 0.5rem; /* Reduce el tamaño de "perfil" */
+       
+    }
+}
+@media (max-width: 870px) {
     header h2 {
-        font-size: 1rem; /* Reduce aún más el tamaño del texto */
-        margin-left: 0; /* Resetea el margen izquierdo */
-        text-align: center; /* Centra el texto si hay espacio disponible */
-        flex: 1; /* Permite que el texto ocupe todo el espacio disponible */
+        font-size: 1.2rem; /* Reduce el tamaño del texto "Bienvenido" */
+        margin-left: 15rem; /* Ajusta el margen hacia la izquierda */
+    }
+}
+/*SECCION 600*/
+@media (max-width: 650px) {
+    aside {
+        display: none; /* Oculta el menú lateral completamente */
+    }
+    .container {
+        margin-left: 0; /* Elimina márgenes laterales */
+        padding-left: 0; /* Elimina padding del contenedor */
+        grid-template-columns: 1fr; /* Ajusta el diseño del contenedor */
+        padding-left: 0; /* Elimina cualquier espacio dejado por el aside */
+    }
+    .main {
+        width: 85%; /* Reduce el ancho del cuadro */
+        margin: 0 auto; /* Centra el cuadro */
+        padding: 5px; /* Reduce padding interno */
+        display: flex;
     }
 
-    .logo img {
-        max-width: 4rem; /* Reduce el tamaño del logo */
-        height: auto; /* Ajusta la altura proporcionalmente */
+    /* Ajustar los cuadros internos (Mis ingresos, gastos, etc.) */
+    .analyse, .new-money, .total-cash {
+        width: 90%; /* Reduce el ancho de los cuadros internos */
+        margin: 5px auto; /* Reduce el margen entre cuadros y los centra */
+        padding: 8px; /* Reduce el padding de cada cuadro */
+    }
+
+    .analyse > div, .new-money > div, .total-cash > div {
+        padding: 5px; /* Reduce padding interno de los contenidos */
+        font-size: 0.85rem; /* Reduce el tamaño del texto interno */
+    }
+
+    /* Ajustar los títulos y montos dentro de los cuadros */
+    .analyse h3, .new-money h3, .total-cash h3 {
+        font-size: 0.8rem; /* Tamaño más pequeño para los subtítulos */
+    }
+
+    .analyse h1, .new-money h1, .total-cash h1 {
+        font-size: 1rem; /* Reduce el tamaño del encabezado principal */
+    }
+
+    .analyse .progresss, .new-money .progresss, .total-cash .progresss {
+        width: 0; /* Reduce gráficos circulares */
+        height: 0;
+    }
+
+    /* Ajustar espacios entre elementos */
+    .main .analyse, .main .new-money, .main .total-cash {
+        gap: 4px; /* Reduce el espacio entre elementos internos */
+    }
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: left; /* Alinear a la izquierda */
+        gap: 3px; /* Reducir espacio entre cuadros */
+        width: 80%; /* Asegurarse de ocupar todo el ancho disponible */
+    }
+    .analyse > div, 
+    .new-money .money, 
+    .total-cash .cash {
+        width: 50%; /* Reducir el ancho de los cuadros */
+        padding: 3px; /* Reducir padding interno */
+        margin: 0 auto; /* Centrar los cuadros */
+        transform: translateX(-20px); /* Desplazar ligeramente a la izquierda */
+    }
+
+    /* Reducir el tamaño del contenido dentro de los cuadros */
+    .analyse h3,
+    .new-money h3,
+    .total-cash h3 {
+        font-size: 0.5rem; /* Reducir tamaño del texto */
+    }
+
+    .analyse h1, 
+    .new-money h1, 
+    .total-cash h1 {
+        font-size: 0.9rem; /* Reducir encabezados */
+    }
+
+    .analyse .progresss, 
+    .new-money .progresss, 
+    .total-cash .progresss {
+        width: 20px; /* Reducir tamaño de los gráficos */
+        height: 20px;
+    }
+
+    .analyse .progresss svg circle {
+        stroke-width: 0; /* Reducir grosor del círculo */
+    }
+
+    .analyse .percentage,
+    .new-money .percentage,
+    .total-cash .percentage {
+        font-size: 0; /* Reducir tamaño del porcentaje */
+    }
+
+    .right-section {
+        width: 130px;
+    }
+    .analyse, .new-money, .total-cash {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .money, .cash {
+        width: 10%;
+    }
+
+    .sidebar a h3 {
+        font-size: 3px;
+    }
+}
+@media (max-width: 650px) {
+    header h2 {
+        font-size: 1.2rem; /* Reduce el tamaño del texto "Bienvenido" */
+        margin-left: 15rem; /* Ajusta el margen hacia la izquierda */
+    }
+}
+@media (max-width: 540px){
+    .right-section{
+        display: none;
+        
     }
 }
