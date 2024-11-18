@@ -449,78 +449,80 @@ h3 {
 }
 
 /* Responsive Design */
+
+/* Para pantallas medianas y más grandes */
 @media (max-width: 1024px) {
-    /* Header adjustments */
+    /* Header ajustes */
     header {
-        height: 60px; /* Reduce header height for smaller screens */
-        flex-direction: column; /* Stack header elements vertically */
+        height: 60px; /* Reducir la altura del header para pantallas más pequeñas */
+        flex-direction: column; /* Apilar los elementos del header verticalmente */
         justify-content: center;
-        padding: 1rem; /* Add padding for better spacing */
+        padding: 1rem; /* Añadir padding para un mejor espaciado */
     }
 
     header h2 {
         margin-left: 0;
-        font-size: 1.5rem; /* Adjust the font size */
-        text-align: center; /* Center-align the header text */
+        font-size: 1.5rem; /* Ajustar el tamaño de la fuente */
+        text-align: center; /* Centrar el texto del header */
     }
 
     header .right-section {
-        flex-direction: column; /* Stack right section elements vertically */
+        flex-direction: column; /* Apilar los elementos de la sección derecha verticalmente */
         align-items: center;
         padding: 0.5rem 0;
     }
 
-    /* Profile Container adjustments */
+    /* Profile Container ajustes */
     .containerProfile {
-        flex-wrap: wrap; /* Allow items to wrap */
-        gap: 20px; /* Add some gap between sections */
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+        gap: 20px; /* Añadir un poco de espacio entre las secciones */
         padding: 10px;
-        width: 100%; /* Take full width */
+        width: 100%; /* Tomar todo el ancho disponible */
     }
 
     /* Profile details (left section) */
     .profile-details,
     .edit-details {
-        width: 100%; /* Set width to 100% to stack them vertically */
-        margin: 0 auto; /* Center align */
-        padding: 15px; /* Adjust padding for smaller screens */
+        width: 100%; /* Establecer el ancho al 100% para apilar los elementos verticalmente */
+        margin: 0 auto; /* Centrar los elementos */
+        padding: 15px; /* Ajustar el padding para pantallas más pequeñas */
     }
 
     .profile-details .profile-image {
-        width: 150px; /* Adjust image size */
+        width: 150px; /* Ajustar el tamaño de la imagen */
         height: 150px;
     }
 
     .profile-details h2 {
-        font-size: 1.1rem; /* Reduce font size */
+        font-size: 1.1rem; /* Reducir el tamaño de la fuente */
         margin-bottom: 8px;
     }
 
     .profile-details p {
-        font-size: 0.85rem; /* Adjust paragraph font size */
+        font-size: 0.85rem; /* Ajustar el tamaño de la fuente */
         color: #555;
     }
 
     /* Edit Details (right section) */
     .edit-details h2 {
-        font-size: 1.2rem; /* Adjust header size */
+        font-size: 1.2rem; /* Ajustar el tamaño del header */
         margin-bottom: 15px;
     }
 
     .form-group {
-        margin-bottom: 15px; /* Adjust spacing for smaller screens */
+        margin-bottom: 15px; /* Ajustar el espaciado para pantallas más pequeñas */
     }
 
     .input-wrapper input {
-        font-size: 0.9rem; /* Adjust font size */
+        font-size: 0.9rem; /* Ajustar el tamaño de la fuente */
     }
 
-    /* Make buttons more compact */
+    /* Hacer que los botones sean más compactos */
     .input-wrapper button {
         padding: 5px 10px;
     }
 
-    /* Adjust font sizes */
+    /* Ajustes de tamaños de fuente */
     h1 {
         font-size: 1.5rem;
     }
@@ -533,22 +535,22 @@ h3 {
         font-size: 0.9rem;
     }
 
-    /* Image responsiveness */
+    /* Responsividad de las imágenes */
     img {
-        width: 100%; /* Ensure images are responsive */
-        object-fit: cover; /* Maintain aspect ratio */
+        width: 100%; /* Asegurar que las imágenes sean responsivas */
+        object-fit: cover; /* Mantener la relación de aspecto */
     }
 }
 
-/* Smaller screens (mobile-first) */
+/* Pantallas más pequeñas (mobile-first) */
 @media (max-width: 600px) {
-    /* Make header more compact */
+    /* Hacer el header más compacto */
     header {
-        height: 50px; /* Further reduce header height */
+        height: 50px; /* Reducir aún más la altura del header */
     }
 
     header .logo img {
-        width: 4rem; /* Adjust logo size */
+        width: 4rem; /* Ajustar el tamaño del logo */
         height: 2rem;
     }
 
@@ -556,10 +558,10 @@ h3 {
         font-size: 1.2rem;
     }
 
-    /* Profile container - make sure it stacks properly */
+    /* Contenedor de perfil - asegurarse de que apile correctamente */
     .containerProfile {
         flex-direction: column;
-        width: 100%; /* Full width */
+        width: 100%; /* Ancho completo */
     }
 
     .profile-details, .edit-details {
@@ -567,11 +569,11 @@ h3 {
     }
 
     .profile-photo {
-        width: 120px; /* Reduce profile photo size */
+        width: 120px; /* Reducir el tamaño de la foto de perfil */
         height: 120px;
     }
 
-    /* Adjust form inputs and labels */
+    /* Ajustar los inputs y etiquetas del formulario */
     .form-group label {
         font-size: 0.8rem;
     }
@@ -580,10 +582,59 @@ h3 {
         font-size: 0.85rem;
     }
 
-    /* Make buttons smaller */
+    /* Hacer los botones más pequeños */
     .input-wrapper button {
         font-size: 0.8rem;
         padding: 4px 8px;
     }
+
+    /* Contenedor del Login centrado */
+    .containerLogin {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centrado vertical */
+        align-items: center; /* Centrado horizontal */
+        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+        padding: 20px;
+    }
+
+    /* Formulario de login */
+    .form-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 400px; /* Limita el ancho máximo del formulario */
+    }
+
+    .form-login input {
+        margin-bottom: 15px; /* Espaciado entre los campos */
+        padding: 10px;
+        font-size: 1rem;
+        width: 100%; /* Asegura que los inputs ocupen todo el ancho disponible */
+    }
+
+    .form-login button {
+        padding: 10px;
+        font-size: 1.1rem;
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .form-login button:hover {
+        background-color: #45a049;
+    }
+
+    /* Menú hamburguesa */
+    header .hamburger-menu {
+        display: flex;
+        justify-content: center; /* Asegura que el icono del menú esté centrado */
+        align-items: center;
+    }
 }
+
 
