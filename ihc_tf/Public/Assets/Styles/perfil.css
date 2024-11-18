@@ -449,19 +449,170 @@ h3 {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .containerProfile {
-        flex-direction: column; /* Cambia la dirección a vertical */
-        align-items: center;
-        gap: 20px; /* Ajusta el espacio entre los elementos */
+@media (max-width: 1024px) {
+    header {
+        height: 60px; /* Reduce la altura del header */
+        flex-direction: column; /* Acomoda elementos en columnas */
+        justify-content: center;
     }
 
-    .profile-details, 
+    header h2 {
+        margin-left: 0;
+        font-size: 1.5rem; /* Ajusta el tamaño del texto */
+        text-align: center;
+    }
+
+    header .right-section {
+        flex-direction: column; /* Acomoda los elementos verticalmente */
+        align-items: center;
+        padding: 0.5rem 0; /* Reduce el espacio */
+    }
+
+    .containerProfile {
+        flex-wrap: wrap;
+        gap: 20px; /* Ajusta espacio entre elementos */
+        padding: 10px;
+        width: 100%; /* Se adapta al ancho completo */
+    }
+
+    .profile-details,
+    .edit-details {
+        width: 100%; /* Acomoda al ancho del contenedor */
+        margin: 0 auto; /* Centra las secciones */
+        padding: 15px;
+    }
+
+    .profile-details .profile-image {
+        width: 150px;
+        height: 150px; /* Reduce el tamaño de la imagen */
+    }
+
+    .profile-details h2 {
+        font-size: 1rem; /* Ajusta el texto */
+    }
+
+    .profile-details p,
+    .profile-details h3 {
+        font-size: 0.85rem;
+    }
+
+    .edit-details h2 {
+        font-size: 1.1rem;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .input-wrapper {
+        padding: 8px; /* Reduce el relleno */
+    }
+
+    .input-wrapper input {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 10px;
+        text-align: center;
+    }
+
+    header .logo img {
+        width: 4rem; /* Reduce el tamaño del logo */
+        height: auto;
+    }
+
+    header .right-section {
+        padding: 0;
+        gap: 10px; /* Menos espacio entre elementos */
+    }
+
+    .containerProfile {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profile-details,
+    .edit-details {
+        width: 90%; /* Reduce el ancho */
+    }
+
+    .profile-details .profile-image {
+        width: 120px; /* Ajusta el tamaño de la imagen */
+        height: 120px;
+    }
+
+    .profile-details h2 {
+        font-size: 0.9rem;
+    }
+
+    .edit-details h2 {
+        font-size: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+    }
+
+    .input-wrapper {
+        padding: 6px; /* Menos relleno */
+    }
+
+    .input-wrapper input {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    header h2 {
+        font-size: 1rem; /* Texto más pequeño */
+    }
+
+    header .right-section {
+        gap: 5px;
+    }
+
+    .containerProfile {
+        padding: 5px;
+        gap: 10px;
+    }
+
+    .profile-details,
     .edit-details {
         width: 100%; /* Ocupa todo el ancho */
+        padding: 10px;
     }
 
-    .edit-details {
-        margin-top: 20px; /* Añade margen entre las secciones */
+    .profile-details .profile-image {
+        width: 100px;
+        height: 100px; /* Imagen más pequeña */
+    }
+
+    .profile-details h2,
+    .profile-details h3 {
+        font-size: 0.8rem;
+    }
+
+    .edit-details h2 {
+        font-size: 0.9rem;
+    }
+
+    .form-group label {
+        font-size: 0.75rem;
+    }
+
+    .input-wrapper {
+        padding: 5px;
+    }
+
+    .input-wrapper input {
+        font-size: 0.75rem;
     }
 }
