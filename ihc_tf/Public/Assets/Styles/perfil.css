@@ -450,169 +450,140 @@ h3 {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    /* Header adjustments */
     header {
-        height: 60px; /* Reduce la altura del header */
-        flex-direction: column; /* Acomoda elementos en columnas */
+        height: 60px; /* Reduce header height for smaller screens */
+        flex-direction: column; /* Stack header elements vertically */
         justify-content: center;
+        padding: 1rem; /* Add padding for better spacing */
     }
 
     header h2 {
         margin-left: 0;
-        font-size: 1.5rem; /* Ajusta el tamaño del texto */
-        text-align: center;
+        font-size: 1.5rem; /* Adjust the font size */
+        text-align: center; /* Center-align the header text */
     }
 
     header .right-section {
-        flex-direction: column; /* Acomoda los elementos verticalmente */
+        flex-direction: column; /* Stack right section elements vertically */
         align-items: center;
-        padding: 0.5rem 0; /* Reduce el espacio */
+        padding: 0.5rem 0;
     }
 
+    /* Profile Container adjustments */
     .containerProfile {
-        flex-wrap: wrap;
-        gap: 20px; /* Ajusta espacio entre elementos */
+        flex-wrap: wrap; /* Allow items to wrap */
+        gap: 20px; /* Add some gap between sections */
         padding: 10px;
-        width: 100%; /* Se adapta al ancho completo */
+        width: 100%; /* Take full width */
     }
 
+    /* Profile details (left section) */
     .profile-details,
     .edit-details {
-        width: 100%; /* Acomoda al ancho del contenedor */
-        margin: 0 auto; /* Centra las secciones */
-        padding: 15px;
+        width: 100%; /* Set width to 100% to stack them vertically */
+        margin: 0 auto; /* Center align */
+        padding: 15px; /* Adjust padding for smaller screens */
     }
 
     .profile-details .profile-image {
-        width: 150px;
-        height: 150px; /* Reduce el tamaño de la imagen */
+        width: 150px; /* Adjust image size */
+        height: 150px;
     }
 
     .profile-details h2 {
-        font-size: 1rem; /* Ajusta el texto */
+        font-size: 1.1rem; /* Reduce font size */
+        margin-bottom: 8px;
     }
 
-    .profile-details p,
-    .profile-details h3 {
-        font-size: 0.85rem;
+    .profile-details p {
+        font-size: 0.85rem; /* Adjust paragraph font size */
+        color: #555;
     }
 
+    /* Edit Details (right section) */
     .edit-details h2 {
-        font-size: 1.1rem;
+        font-size: 1.2rem; /* Adjust header size */
+        margin-bottom: 15px;
     }
 
-    .form-group label {
-        font-size: 0.85rem;
-    }
-
-    .input-wrapper {
-        padding: 8px; /* Reduce el relleno */
+    .form-group {
+        margin-bottom: 15px; /* Adjust spacing for smaller screens */
     }
 
     .input-wrapper input {
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        height: auto; /* Ajusta la altura automáticamente */
-        padding: 10px;
-        text-align: center;
+        font-size: 0.9rem; /* Adjust font size */
     }
 
-    header .logo img {
-        width: 4rem; /* Reduce el tamaño del logo */
-        height: auto;
+    /* Make buttons more compact */
+    .input-wrapper button {
+        padding: 5px 10px;
     }
 
-    header .right-section {
-        padding: 0;
-        gap: 10px; /* Menos espacio entre elementos */
+    /* Adjust font sizes */
+    h1 {
+        font-size: 1.5rem;
     }
 
-    .containerProfile {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .profile-details,
-    .edit-details {
-        width: 90%; /* Reduce el ancho */
-    }
-
-    .profile-details .profile-image {
-        width: 120px; /* Ajusta el tamaño de la imagen */
-        height: 120px;
-    }
-
-    .profile-details h2 {
-        font-size: 0.9rem;
-    }
-
-    .edit-details h2 {
+    h3 {
         font-size: 1rem;
     }
 
-    .form-group label {
-        font-size: 0.8rem;
-    }
-
-    .input-wrapper {
-        padding: 6px; /* Menos relleno */
-    }
-
-    .input-wrapper input {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 5px;
-    }
-
-    header h2 {
-        font-size: 1rem; /* Texto más pequeño */
-    }
-
-    header .right-section {
-        gap: 5px;
-    }
-
-    .containerProfile {
-        padding: 5px;
-        gap: 10px;
-    }
-
-    .profile-details,
-    .edit-details {
-        width: 100%; /* Ocupa todo el ancho */
-        padding: 10px;
-    }
-
-    .profile-details .profile-image {
-        width: 100px;
-        height: 100px; /* Imagen más pequeña */
-    }
-
-    .profile-details h2,
-    .profile-details h3 {
-        font-size: 0.8rem;
-    }
-
-    .edit-details h2 {
+    p {
         font-size: 0.9rem;
     }
 
-    .form-group label {
-        font-size: 0.75rem;
+    /* Image responsiveness */
+    img {
+        width: 100%; /* Ensure images are responsive */
+        object-fit: cover; /* Maintain aspect ratio */
+    }
+}
+
+/* Smaller screens (mobile-first) */
+@media (max-width: 600px) {
+    /* Make header more compact */
+    header {
+        height: 50px; /* Further reduce header height */
     }
 
-    .input-wrapper {
-        padding: 5px;
+    header .logo img {
+        width: 4rem; /* Adjust logo size */
+        height: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    /* Profile container - make sure it stacks properly */
+    .containerProfile {
+        flex-direction: column;
+        width: 100%; /* Full width */
+    }
+
+    .profile-details, .edit-details {
+        width: 100%;
+    }
+
+    .profile-photo {
+        width: 120px; /* Reduce profile photo size */
+        height: 120px;
+    }
+
+    /* Adjust form inputs and labels */
+    .form-group label {
+        font-size: 0.8rem;
     }
 
     .input-wrapper input {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    /* Make buttons smaller */
+    .input-wrapper button {
+        font-size: 0.8rem;
+        padding: 4px 8px;
     }
 }
+
