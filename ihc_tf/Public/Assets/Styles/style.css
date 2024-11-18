@@ -584,7 +584,7 @@ textarea {
 
 .contact .row .form-container input:focus,
 textarea:focus {
-    border: .4rem solid #0A2B59;
+    border: .1rem solid #fff;
 }
 
 .contact .row .form-container textarea {
@@ -597,7 +597,7 @@ textarea:focus {
 .contact .row .form-container input[type="submit"] {
     height: 5rem;
     width: 17rem;
-    background: #0A2B59;
+    background: #FF8343;
     color: #fff;
     cursor: pointer;
     font-size: 2rem;
@@ -606,8 +606,8 @@ textarea:focus {
 
 .contact .row .form-container input[type="submit"]:hover {
     background: none;
-    color: #0A2B59;
-    border: .2rem solid #0A2B59;
+    color: #FF8343;
+    border: .1rem solid #FF8343;
 }
 
 footer {
@@ -829,7 +829,78 @@ header .logo {
     width: 400px;
     margin-bottom: 1.5rem;
 }
-
+footer {
+    background-color: #2B3D49; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Asegura que los elementos se adapten */
+    gap: 20px; /* Espaciado entre columnas */
+    margin-bottom: 9%;
+    margin-top: 2%;
+}
+.footer-logo-description {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+.footer-logo {
+    width: 29%; /* Ajusta el tamaño del logo */
+    
+}
+.footer-sections,
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+    
+    align-items:center;
+}
+.footer-sections h3,
+.footer-social h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.footer-sections ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-sections li,
+.footer-social li {
+    margin-bottom: 8px;
+}
+.footer-sections a,
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.footer-sections a:hover,
+.footer-social a:hover {
+    text-decoration: underline;
+}
+.footer-bar {
+    border-top: 1px solid #fff;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    text-align: left;
+}
+.footer-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer-bar a:hover {
+    text-decoration: underline;
+}
 /* RESPONSIVE DESIGN */
 
 /* Pantallas grandes: Ancho <= 1200px */
@@ -1014,6 +1085,17 @@ header .logo {
         padding: 1rem;
         font-size: 1.5rem; /* Ajusta tamaño general */
     }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo-description {
+        text-align: center;
+    }
+    .footer-sections,
+    .footer-social {
+        text-align: center;
+    }
 }
 
 /* Pantallas móviles: Ancho <= 576px */
@@ -1082,3 +1164,4 @@ header .logo {
         font-size: 1.4rem; /* Reduce tamaño del texto */
     }
 }
+
