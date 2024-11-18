@@ -51,7 +51,7 @@ header {
     position: absolute; /* Posicionamiento absoluto */
     display: flex; /* Flexbox para organizar elementos */
     align-items: center; /* Alineación centrada verticalmente */
-    z-index: 1; /* Z-index para apilar elementos */
+    z-index: 100000; /* Z-index para apilar elementos */
     transition: .2s; /* Transición suave para cambios */
     justify-content: space-between; /* Espacio entre elementos */
 }
@@ -293,6 +293,11 @@ h2{
 h3{
     font-weight: 500;
     font-size: 0.87rem;
+    
+}
+
+.welcome h3{
+    color: var(--color-dark);
 }
 
 small{
@@ -326,6 +331,7 @@ b{
 .warning{
     color: var(--color-warning);
 }
+
 
 
 
@@ -466,6 +472,7 @@ main .welcome h1{
     text-align: center;
     padding-bottom: 0.5rem;
     line-height: 1.5;
+    color: var(--color-dark);
 }
  
 
@@ -490,6 +497,7 @@ main .welcome > div{
 main .welcome .sales{
     padding: var(--card-padding);
     background-color: var(--color-white);
+    
 }
 main .welcome .gestion{
     padding: var(--card-padding);
@@ -538,6 +546,7 @@ main .welcome > div .status{
 main .analywelcome h3{
     margin-left: 0.6rem;
     font-size: 1rem;
+    
 }
 
 main .welcome .progresss{
