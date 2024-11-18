@@ -51,7 +51,7 @@ header {
     position: absolute; /* Posicionamiento absoluto */
     display: flex; /* Flexbox para organizar elementos */
     align-items: center; /* Alineación centrada verticalmente */
-    z-index: 1; /* Z-index para apilar elementos */
+    z-index: 1000; /* Z-index para apilar elementos */
     transition: .2s; /* Transición suave para cambios */
     justify-content: space-between; /* Espacio entre elementos */
 }
@@ -97,6 +97,9 @@ header h2 {
     z-index: 100; /* Asegura que esté por encima de otros elementos */
       
 }
+
+
+
 
 
 
@@ -454,9 +457,9 @@ main .welcome{
    
     margin-left: 7rem;
     margin-top: 3rem;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem 5rem;
+    display:grid;
     
     
     
@@ -527,17 +530,9 @@ main .analywelcome h3{
     font-size: 1rem;
 }
 
-main .welcome .progresss{
-    position: relative;
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-}
 
-main .welcome svg{
-    width: 7rem;
-    height: 7rem;
-}
+
+
 
 main .welcome svg circle{
     fill: none;
@@ -687,8 +682,11 @@ main .welcome .progresss .percentage{
     }
 
     main .welcome{
-        grid-template-columns: 1fr;
-        gap: 0;
+       
+        gap: 1;   
+        
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+            
     }
 
     main .new-users .user-list .user{
@@ -730,7 +728,7 @@ main .welcome .progresss .percentage{
         position: fixed;
         background-color: var(--color-white);
         width: 15rem;
-        z-index: 3;
+        z-index: 2;
         box-shadow: 1rem 3rem 4rem var(--color-light);
         height: 100vh;
         left: -100%;
@@ -743,6 +741,26 @@ main .welcome .progresss .percentage{
         left: 0;
        } 
     }
+   
+
+    .chatbot {
+        background-color: #E8E8E8; /* Color de fondo del chatbot */
+        border-radius: 15px; /* Bordes redondeados */
+        display: flex; /* Flexbox para organizar elementos */
+        gap: 20px; /* Espacio entre elementos */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+        width: 100%; /* Ancho completo */
+        max-width: 600px; /* Ancho máximo */
+        padding: 0 20px; /* Padding horizontal */
+        grid-column: span 1; /* Se expande a dos columnas en la cuadrícula */
+        z-index: 1; /* Asegura que esté por encima de otros elementos */
+          
+    }
+
+    aside .sidebar{
+        background-color: var(--color-white);
+    }
+    
 
     aside .logo{
         margin-left: 1rem;
@@ -759,16 +777,20 @@ main .welcome .progresss .percentage{
     aside .sidebar a{
         width: 100%;
         height: 3.4rem;
+        background-color: transparent;
+        color: var(--color-dark);
     }
 
     aside .sidebar a:last-child{
         position: absolute;
         bottom: 5rem;
+        
     }
 
     aside .toggle .close{
         display: inline-block;
         cursor: pointer;
+        
     }
 
     main{
@@ -789,6 +811,27 @@ main .welcome .progresss .percentage{
     main .recent-orders table{
         width: 100%;
         margin: 0;
+    }
+
+
+    main .welcome > div:not(.chatbot) {
+        display: flex; /* Habilita flexbox dentro de los div */
+        justify-content: center; /* Centra el contenido horizontalmente */
+        align-items: center; /* Centra el contenido verticalmente */
+        text-align: center; /* Opcional: centra el texto */
+    }
+
+   
+    main .welcome {
+        
+        padding: 0;
+        margin: 0;
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 1rem; /* Espaciado uniforme entre los elementos */
+    }
+
+    main .welcome > div {
+        width: 100%; /* Asegúrate de que los elementos internos ocupen todo el ancho */
     }
 
     .right-section{

@@ -4,8 +4,17 @@ const darkMode = document.querySelector('.dark-mode');
 
 
 menuBtn.addEventListener('click', () => {
-    sideMenu.style.display = 'block';
+  // Si el sidebar está visible, lo oculta; si está oculto, lo muestra
+  if (sideMenu.style.display === 'block') {
+      sideMenu.style.display = 'none'; // Oculta el menú
+  } else {
+      sideMenu.style.display = 'block'; // Muestra el menú
+  }
 });
+
+
+
+
 
 
 

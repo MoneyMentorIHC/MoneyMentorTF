@@ -686,10 +686,7 @@ main .welcome .progresss .percentage{
 
 
 @media screen and (max-width: 1200px) {
-    .container{
-        width: 95%;
-        grid-template-columns: 7rem auto 23rem;
-    }
+    
 
     aside .logo h2{
         display: none;
@@ -729,24 +726,12 @@ main .welcome .progresss .percentage{
         width: 83vw;
     }
 
-    main table thead tr th:last-child,
-    main table thead tr th:first-child{
-        display: none;
-    }
-
-    main table tbody tr td:last-child,
-    main table tbody tr td:first-child{
-        display: none;
-    }
+    
 
 }
 
 @media screen and (max-width: 768px) {
-    .container{
-        width: 100%;
-        grid-template-columns: 1fr;
-        padding: 0 var(--padding-1);
-    }
+    
 
     aside{
         position: fixed;
