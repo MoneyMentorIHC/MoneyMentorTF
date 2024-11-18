@@ -60,3 +60,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+function simulateLogin(platform) {
+  switch (platform) {
+      case 'Google':
+          window.location.href = "https://accounts.google.com/o/oauth2/v2/auth";
+          break;
+      case 'Facebook':
+          window.location.href = "https://www.facebook.com/v12.0/dialog/oauth";
+          break;
+      case 'Twitter':
+          window.location.href = "https://twitter.com/i/oauth2/authorize";
+          break;
+      case 'Linkedin':
+          window.location.href = "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=SIMULATED_CLIENT_ID&redirect_uri=https://mi-simulacion.com/linkedin/callback&scope=r_liteprofile%20r_emailaddress";
+          break;
+  }
+}
