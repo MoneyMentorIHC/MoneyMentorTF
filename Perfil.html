@@ -10,6 +10,48 @@
     <!-- Enlace a Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hamburger-menu {
+            display: none; /* Inicialmente oculto, solo visible en pantallas pequeñas */
+        }
+
+        .hamburger-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+        }
+
+        .hamburger-icon .bar {
+            background-color: #333;
+            height: 4px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Medias Queries para Responsividad */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Mostrar el icono en pantallas pequeñas */
+            }
+
+            .sidebar {
+                display: none; /* Ocultar la barra lateral en pantallas pequeñas */
+            }
+
+            .sidebar.active {
+                display: block; /* Mostrar la barra lateral cuando tenga la clase 'active' */
+            }
+        }
+
         /* Medias Queries para Responsividad */
         @media (max-width: 768px) {
             .container {
@@ -88,7 +130,16 @@
 <body>
     <!-- Mueve el header dentro del body -->
     <div class="container">
-        <!-- Sección lateral izquierda -->
+        <!-- Sección para el menú hamburguesa -->
+        <div class="hamburger-menu">
+            <button id="hamburger-icon" class="hamburger-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+
+        <!-- Sección lateral izquierda (barra de navegación) -->
         <aside>
             <div class="sidebar">
                 <a href="menu.html" id="inicio_sidebar">
@@ -214,6 +265,15 @@
     </div>
 
     <!-- Scripts -->
-    <script src="ihc_tf/Public/Assets/Scripts/menu.js"></script> 
+    <script>
+        // Obtener el icono del menú hamburguesa y la barra lateral
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const sidebar = document.querySelector('.sidebar');
+
+        // Agregar un evento para alternar la visibilidad de la barra lateral
+        hamburgerIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('active'); // Alternar la clase 'active'
+        });
+    </script>
 </body>
 </html>
