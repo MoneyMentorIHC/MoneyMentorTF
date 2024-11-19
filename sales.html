@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Mentor Membership</title>
+    <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/sales.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+
+
+<header>
+    <div class="toggle">
+        <div class="logo">
+            <img src="ihc_tf/Public/Assets/Img/logocortado.png">
+        </div>
+    </div>
+
+    <div class="right-section">
+        <div class="nav">
+            <button id="menu-btn">
+                <span class="material-icons-sharp">
+                    menu
+                </span>
+            </button>
+            <div class="dark-mode">
+                <span class="material-icons-sharp active">
+                    light_mode
+                </span>
+                <span class="material-icons-sharp">
+                    dark_mode
+                </span>
+            </div>
+
+            <div class="profile">
+                <div class="info">
+                    <p>Hola, <b><span id="username-display"></span></b></p>
+                    <small class="text-muted">perfil</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="ihc_tf/Public/Assets/Img/daf.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="sidebar">
+                <a href="#" id="inicio_sidebar">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Inicio</h3>
+                </a>
+                <a href="calculadora.html">
+                    <span class="material-icons-sharp">calculate</span>
+                    <h3>Calculadora</h3>
+                </a>
+                <a href="calendario.html">
+                    <span class="material-icons-sharp">calendar_month</span>
+                    <h3>Calendario</h3>
+                </a>
+                <a href="analisis.html">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Análisis</h3>
+                </a>
+                <a href="Gestion.html">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>Gestión</h3>
+                </a>
+                <a href="metas.html">
+                    <span class="material-icons-sharp">task</span>
+                    <h3>Metas</h3>
+                </a>
+                <a href="Consejos.html">
+                    <span class="material-icons-sharp">quiz</span>
+                    <h3>Consejos</h3>
+                </a>
+                <a href="foro.html">
+                    <span class="material-icons-sharp">rate_review</span>
+                    <h3>Foro</h3>
+                </a>
+                <a href="Perfil.html">
+                    <span class="material-icons-sharp">add</span>
+                    <h3>Perfil</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Membership Content -->
+        <div class="membership-head">
+            <div class="logo-container">
+                <img src="ihc_tf/Public/Assets/Img/logocortado.png" alt="Money Mentor Logo" class="logo">
+            </div>
+            <h1 class="main-heading">Domina tus finanzas. Sin complicaciones.</h1>
+            <p class="sub-heading">Tu mentor de finanzas personales por menos de un café al mes.</p>
+            
+            <button class="cta-button" id="open-modal">Prueba 1 mes gratis</button>
+            <p class="alternative">O ahorra más con un <a href="#" id="open-modalF">plan familiar</a> o <a href="#" id="open-modalE">plan estudiantil</a></p>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal-overlay" id="modal">
+            <div class="modal-content">
+                <span class="close-modal" id="close-modal">&times;</span>
+                <h2>Prueba Money Mentor gratis por 1 mes</h2>
+                <div class="plan">
+                    <label>
+                        <input type="radio" name="plan" value="individual">
+                        <div class="plan-details">
+                            <h3>Basico</h3>
+                            <p>1 mes gratis por PEN 0 &bull; Luego PEN 2.99/mes</p>
+                            <a href="#">Aplican restricciones</a>
+                        </div>
+                    </label>
+                </div>
+                <div class="plan">
+                    <label>
+                        <input type="radio" name="plan" value="family">
+                        <div class="plan-details">
+                            <h3>Standar</h3>
+                            <p>1 mes gratis por PEN 0 &bull; Luego PEN 5.99/mes</p>
+                            <a href="#">Aplican restricciones</a>
+                        </div>
+                    </label>
+                </div>
+                <div class="plan">
+                    <label>
+                        <input type="radio" name="plan" value="student">
+                        <div class="plan-details">
+                            <h3>Premium</h3>
+                            <p>1 mes gratis por PEN 0 &bull; Luego PEN 9.99/mes</p>
+                            <a href="#">Aplican restricciones</a>
+                        </div>
+                    </label>
+                </div>
+                <div class="modal-actions">
+                    <button class="cancel-button" id="cancel-modal">Cancelar</button>
+                    <button class="confirm-button">Prueba 1 mes</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal-overlay" id="modalE">
+                <div class="modal-content">
+                    <span class="close-modal" id="close-modalE">&times;</span>
+                    <h2>PLAN ESTUDIANTIL</h2>
+                    <div class="plan">
+                        <label>
+                            <input type="radio" name="plan" value="individual">
+                            <div class="plan-details">
+                                <h3>Basico</h3>
+                                <p>1 mes gratis por PEN 0 &bull; Luego PEN 1.99/mes</p>
+                                <a href="#">Aplican restricciones</a>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="plan">
+                        <label>
+                            <input type="radio" name="plan" value="family">
+                            <div class="plan-details">
+                                <h3>Standar</h3>
+                                <p>1 mes gratis por PEN 0 &bull; Luego PEN 3.99/mes</p>
+                                <a href="#">Aplican restricciones</a>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="plan">
+                        <label>
+                            <input type="radio" name="plan" value="student">
+                            <div class="plan-details">
+                                <h3>Premium</h3>
+                                <p>1 mes gratis por PEN 0 &bull; Luego PEN 6.99/mes</p>
+                                <a href="#">Aplican restricciones</a>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="cancel-button" id="cancel-modalE">Cancelar</button>
+                        <button class="confirm-button">Prueba 1 mes</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="modal-overlay" id="modalF">
+            <div class="modal-content">
+                <span class="close-modal" id="close-modalF">&times;</span>
+                <h2>PLAN FAMILIAR</h2>
+                <div class="plan">
+                    <label>
+                        <input type="radio" name="plan" value="individual">
+                        <div class="plan-details">
+                            <h3>DOS planes <b>basico</b> por</h3>
+                            <p>1 mes gratis por PEN 0 &bull; Luego PEN 1.50/mes</p>
+                            <a href="#">Aplican restricciones</a>
+                        </div>
+                    </label>
+                </div>
+                <div class="plan">
+                    <label>
+                        <input type="radio" name="plan" value="family">
+                        <div class="plan-details">
+                            <h3>DOS planes <b>estandar</b> por</h3>
+                            <p>1 mes gratis por PEN 0 &bull; Luego PEN 8.25/mes</p>
+                            <a href="#">Aplican restricciones</a>
+                        </div>
+                    </label>
+                </div>
+                <div class="plan">
+                    <label>
+                        <input type="radio" name="plan" value="student">
+                        <div class="plan-details">
+                            <h3>DOS planes <b>premium</b> por</h3>
+                            <p>1 mes gratis por PEN 0 &bull; Luego PEN 12.25/mes</p>
+                            <a href="#">Aplican restricciones</a>
+                        </div>
+                    </label>
+                </div>
+                <div class="modal-actions">
+                    <button class="cancel-button" id="cancel-modalF">Cancelar</button>
+                    <button class="confirm-button">Prueba 1 mes</button>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+    </div>
+
+    <script src="ihc_tf/Public/Assets/Scripts/sales.js"></script>
+</body>
+</html>
