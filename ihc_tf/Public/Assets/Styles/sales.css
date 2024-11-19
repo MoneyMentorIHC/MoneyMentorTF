@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    /* Colores principales */
+    --color-primary: #6C9BCF; /* Color primario */
+    --color-danger: #FF0060; /* Color para errores */
+    --color-success: #1B9C85; /* Color para éxito */
+    --color-warning: #F7D060; /* Color para advertencias */
+    --color-white: #fff; /* Color blanco */
+    --color-info-dark: #7d8da1; /* Color para información oscura */
+    --color-dark: #363949; /* Color oscuro */
+    --color-light: rgba(132, 139, 200, 0.18); /* Color claro con opacidad */
+    --color-dark-variant: #677483; /* Variante de color oscuro */
+    --color-background: #f6f6f9; /* Color de fondo */
+    /* Radii y padding para las tarjetas */
+    --card-border-radius: 1.8rem; /* Radio de borde de las tarjetas */
+    --border-radius-1: 0.4rem; /* Radio de borde 1 */
+    --border-radius-2: 1.2rem; /* Radio de borde 2 */
+
+    /* Padding para las tarjetas */
+    --card-padding: 2rem; /* Padding para tarjetas */
+    --padding-1: 1.2rem; /* Padding 1 */
+
+    /* Sombra de cajas */
+    --box-shadow: 0 2rem 3rem var(--color-light); /* Sombra para cajas */
+
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+/* Modal Content con sombra */
+.modal-content {
+    background-color: #f7f7fa;
+    color: #373a4a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+
+    /* Agregando sombra para destacar el modal */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+.close-modal {
+    font-size: 24px;
+    color: #373a4a;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Plans */
+.plan {
+    border: 1px solid #444;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.plan input {
+    margin-right: 10px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cancel-button,
+.confirm-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.cancel-button {
+    background-color: #444;
+    color: #fff;
+}
+
+.confirm-button {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.cancel-button:hover {
+    background-color: #555;
+}
+
+.confirm-button:hover {
+    background-color: #45a049;
+}
+
+
+.membership-head {
+    margin-left: 30rem; /* Si deseas centrar horizontalmente en relación al padre, ajusta esto */
+    max-width: 600px;
+    padding-left: 20px;
+
+    /* Centrado vertical y horizontal */
+    display: flex;
+    flex-direction: column; /* Alinear elementos en columna */
+   
+    align-items: center; /* Centrado horizontal */
+
+    /* Altura para centrar el contenido */
+     /* Ajusta según el diseño */
+    text-align: center; /* Centrar texto */
+}
+
+
+.logo-container .logo {
+    margin-top: 20rem;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.main-heading {
+    
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.offer {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+.alternative {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.alternative a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.alternative a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la sección derecha del encabezado */
+header .right-section{
+     align-items: flex-start; /* Alineación de los elementos al inicio */
+    align-self: flex-start; /* Alineación del elemento al inicio */
+    gap: 15px; /* Espacio entre elementos */
+    display: flex; /* Display flex para organizar elementos */
+    padding: 0 1rem; /* Padding horizontal */
+}
+
+.logo{
+    z-index: 2; /* Asegura que la logo esté encima */
+}
+
+
+
+/* Estilos generales para el encabezado */
+header {
+    width: 100%; /* Ancho completo */
+    height: 70px; /* Altura del encabezado */
+    background: #2B3D49; /* Color de fondo del encabezado */
+    position: absolute; /* Posicionamiento absoluto */
+    display: flex; /* Flexbox para organizar elementos */
+    align-items: center; /* Alineación centrada verticalmente */
+    z-index: 100000; /* Z-index para apilar elementos */
+    transition: .2s; /* Transición suave para cambios */
+    justify-content: space-between; /* Espacio entre elementos */
+}
+
+/* Estilo para el título en el encabezado */
+header h2 {
+    margin-left: -33rem; /* Margen a la izquierda */
+    color: white; /* Color del texto */
+    font-size: 2rem; /* Tamaño de fuente */
+}
+
+/* Estilos para el contenedor del asistente virtual */
+
+
+
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* iconos de la barra */
+.sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #2B3D49;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.sidebar{
+    width: 15rem;
+}
+.sidebar a:hover {
+    background-color: #2B3D49; 
+    color: #0A2B59; 
+    border-radius: 20px; 
+    transform: translateX(-20px); 
+}
+
+.sidebar a:hover .material-icons-sharp {
+    color: #FF8343; /* icono  */
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+    background-color: var(--color-background);
+    z-index: 2;
+}
+
+a{
+    color: #FBBD5D;
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+    z-index: 1
+}
+
+h2{
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+h3{
+    font-weight: 500;
+    font-size: 0.87rem;
+    
+}
+
+
+
+small{
+    font-size: 0.76rem;
+}
+
+p{
+    color: var(--color-dark-variant);
+}
+
+b{
+    color: #FBBD5D;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+
+
+
+
+
+.container{
+    display: flex;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 12rem auto 23rem;
+}
+
+aside{
+    height: 100vh;
+}
+
+aside .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+
+
+.logo img{
+    padding-left: 2rem;
+    padding-top: 0rem;
+    width: 5rem;
+    height:3rem;
+}
+
+
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    background-color: #2B3D49;
+    box-shadow: var(--box-shadow);
+    border-radius: 15px;
+    height: 88vh;
+    position: relative;
+    top: 7rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar:hover{
+    box-shadow: none;
+}
+
+#inicio_sidebar{
+    margin-top: 2rem;
+}
+aside .sidebar a{
+    /* margin-top: 1rem; */
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    height: 3.7rem;
+    gap: 1rem;
+    position: relative;
+    margin-left: 2rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active{
+    width: 100%;
+    color: var #0A2B59;
+    background-color: var(--color-light);
+    margin-left: 0;
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 18px;
+    background-color: var(--color-primary);
+}
+
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover{
+    color:#FF8343;
+}
+
+aside .sidebar a:hover span{
+    margin-left: 0.6rem;
+}
+
+aside .sidebar .message-count{
+    padding: 2px 6px;
+    color: var(--color-white);
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+
+
+
+
+.right-section{
+    margin-top: 1.4rem;
+}
+
+.right-section .nav{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right-section .nav button{
+    display: none;
+}
+
+.right-section .dark-mode{
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .dark-mode span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section .dark-mode span.active{
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+.right-section .nav .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+    align-items: right;
+}
+
+.right-section .nav .profile .profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.right-section .user-profile{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.right-section .user-profile:hover{
+    box-shadow: none;
+}
+
+.right-section .user-profile img{
+    width: 11rem;
+    height: auto;
+    margin-bottom: 0.8rem;
+    border-radius: 50%;
+}
+
+.right-section .user-profile h2{
+    margin-bottom: 0.2rem;
+}
+
+
+
+
+/* Ajustar tamaño uniforme para las imágenes */
+
+
+
+@media screen and (max-width: 1200px) {
+    
+
+    aside .logo h2{
+        display: none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+
+    main .welcome{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    main .new-users .user-list .user{
+        flex-basis: 40%;
+    }
+
+    main .recent-orders {
+        width: 94%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 2rem 0 0 0.8rem;
+    }
+
+    main .recent-orders table{
+        width: 83vw;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    aside{
+        position: fixed;
+        background-color: var(--color-white);
+        width: 15rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        left: -100%;
+        display: none;
+        animation: showMenu 0.4s ease forwards;
+    }
+
+    @keyframes showMenu {
+       to{
+        left: 0;
+       } 
+    }
+
+    aside .logo{
+        margin-left: 1rem;
+    }
+
+    aside .logo h2{
+        display: inline;
+    }
+
+    aside .sidebar h3{
+        display: inline;
+    }
+
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    aside .toggle .close{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+
+    main .new-users .user-list .user{
+        flex-basis: 35%;
+    }
+
+    main .recent-orders{
+        position: relative;
+        margin: 3rem 0 0 0;
+        width: 100%;
+    }
+
+    main .recent-orders table{
+        width: 100%;
+        margin: 0;
+    }
+
+    .right-section{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+
+    .right-section .nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        background-color: var(--color-white);
+        padding: 0 var(--padding-1);
+        height: 4.6rem;
+        width: 100%;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+        margin: 0;
+    }
+
+    .right-section .nav .dark-mode{
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
+
+    .right-section .profile .info{
+        display: none;
+    }
+
+    .right-section .nav button{
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+
+    .right-section .nav button span{
+        font-size: 2rem;
+    }
+
+}
