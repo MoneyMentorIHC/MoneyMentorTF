@@ -28,15 +28,15 @@
                     <span class="material-icons-sharp">dark_mode</span>
                 </div>
 
-        <div class="profile">
-            <div class="info">
-                <p>Hola, <b><span id="username-display"></span></b></p>
-                <small class="text-muted">perfil</small>
-            </div>
-            <div class="profile-photo">
-                <img src="ihc_tf/Public/Assets/Img/daf.jpg">
-            </div>
-        </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hola, <b><span id="username-display">Usuario</span></b></p>
+                        <small class="text-muted">perfil</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="ihc_tf/Public/Assets/Img/daf.jpg" alt="Profile">
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -44,24 +44,44 @@
     <div class="container">
         <aside>
             <div class="sidebar">
-                <a href="menu.html" id="inicio_sidebar"><span class="material-icons-sharp">home</span><h3>Inicio</h3></a>
-                <a href="calculadora.html"><span class="material-icons-sharp">calculate</span><h3>Calculadora</h3></a>
-                <a href="calendario.html"><span class="material-icons-sharp">calendar_month</span><h3>Calendario</h3></a>
-                <a href="analisis.html"><span class="material-icons-sharp">insights</span><h3>Analisis</h3></a>
-                <a href="Gestion.html"><span class="material-icons-sharp">inventory</span><h3>Gestion</h3></a>
-                <a href="metas.html"><span class="material-icons-sharp">task</span><h3>Metas</h3></a>
-                <a href="Consejos.html"><span class="material-icons-sharp">quiz</span><h3>Consejos</h3></a>
-                <a href="foro.html"><span class="material-icons-sharp">rate_review</span><h3>Foro</h3></a>
-                <a href="Perfil.html"><span class="material-icons-sharp">add</span><h3>Perfil</h3></a>
-                <a href="index.html"><span class="material-icons-sharp">logout</span><h3>Logout</h3></a>
+                <a href="menu.html" id="inicio_sidebar"><span class="material-icons-sharp">home</span>
+                    <h3>Inicio</h3>
+                </a>
+                <a href="calculadora.html"><span class="material-icons-sharp">calculate</span>
+                    <h3>Calculadora</h3>
+                </a>
+                <a href="calendario.html"><span class="material-icons-sharp">calendar_month</span>
+                    <h3>Calendario</h3>
+                </a>
+                <a href="analisis.html"><span class="material-icons-sharp">insights</span>
+                    <h3>Análisis</h3>
+                </a>
+                <a href="Gestion.html"><span class="material-icons-sharp">inventory</span>
+                    <h3>Gestión</h3>
+                </a>
+                <a href="metas.html"><span class="material-icons-sharp">task</span>
+                    <h3>Metas</h3>
+                </a>
+                <a href="Consejos.html"><span class="material-icons-sharp">quiz</span>
+                    <h3>Consejos</h3>
+                </a>
+                <a href="foro.html"><span class="material-icons-sharp">rate_review</span>
+                    <h3>Foro</h3>
+                </a>
+                <a href="Perfil.html"><span class="material-icons-sharp">add</span>
+                    <h3>Perfil</h3>
+                </a>
+                <a href="index.html"><span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
             </div>
         </aside>
 
         <main>
-            <div class="foro">
+            <!-- Sección de Foro -->
+            <div id="foro" class="foro">
                 <h1>Foro Comunitario</h1>
                 <div class="forum-posts">
-                    <!-- Post de Eleanor Villanueva -->
                     <div class="post">
                         <div class="user-info">
                             <img src="ihc_tf/Public/Assets/Img/user1.png" alt="User">
@@ -70,8 +90,6 @@
                         <p>¿Cuál es su estrategia de ahorro favorita?</p>
                         <button class="responder-btn">Responder</button>
                     </div>
-        
-                    <!-- Post de Alejandro Almonte -->
                     <div class="post">
                         <div class="user-info">
                             <img src="ihc_tf/Public/Assets/Img/user2.png" alt="User">
@@ -80,7 +98,6 @@
                         <p>¿Cuándo es el momento adecuado para empezar a planificar para la jubilación?</p>
                         <button class="responder-btn">Responder</button>
                     </div>
-        
                     <!-- Post de Carlos Rodriguez -->
                     <div class="post">
                         <div class="user-info">
@@ -121,11 +138,56 @@
                         <button class="responder-btn">Responder</button>
                     </div>
                 </div>
+
+                <!-- Botón para mostrar gráficos -->
+                <div class="scroll-arrow">
+                    <a id="show-graficos" class="arrow-link">
+                        <span class="material-icons-sharp">keyboard_arrow_down</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sección de Gráficos -->
+            <div id="graficos" class="graficos" style="display: none;">
+                <h1>Gráficos de Ahorro</h1>
+                <div class="forum-cards">
+                    <div class="forum-card">
+                        <div class="card-header">
+                            <h2>Eleanor Villanueva</h2>
+                            <img src="ihc_tf/Public/Assets/Img/user1.png" alt="Eleanor">
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Cuenta de ahorro</strong></p>
+                            <p>Cantidad ahorrada total: <b>1050 soles</b></p>
+                            <p>Última fecha de actualización: <b>19/05/24</b></p>
+                            <div class="chart">
+                                <img src="ihc_tf/Public/Assets/Img/piechart1.png" alt="Gráfico de Ahorro">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forum-card">
+                        <div class="card-header">
+                            <h2>Alejandro Almonte</h2>
+                            <img src="ihc_tf/Public/Assets/Img/user2.png" alt="Alejandro">
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Cuenta de ahorro</strong></p>
+                            <p>Cantidad ahorrada total: <b>900 soles</b></p>
+                            <p>Última fecha de actualización: <b>19/05/24</b></p>
+                            <div class="chart">
+                                <img src="ihc_tf/Public/Assets/Img/piechart2.png" alt="Gráfico de Ahorro">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-arrow">
+                    <a id="show-foro" class="arrow-link">
+                        <span class="material-icons-sharp">keyboard_arrow_up</span>
+                    </a>
+                </div>
             </div>
         </main>
-        
     </div>
-
     <div id="popup" class="popup hidden">
         <div class="popup-content">
             <button id="close-popup" class="close-btn" aria-label="Cerrar">&times;</button>
@@ -154,11 +216,36 @@
             </div>
         </div>
     </div>
-    
-    
-    <script src="ihc_tf/Public/Assets/Scripts/menu.js"></script>   
-    <script src="ihc_tf/Public/Assets/Scripts/foro.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const showGraficosButton = document.getElementById('show-graficos');
+            const showForoButton = document.getElementById('show-foro');
+            const foroSection = document.getElementById('foro');
+            const graficosSection = document.getElementById('graficos');
+
+            // Mostrar gráficos
+            showGraficosButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                foroSection.style.display = 'none';
+                graficosSection.style.display = 'block';
+                graficosSection.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // Regresar al foro
+            showForoButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                graficosSection.style.display = 'none';
+                foroSection.style.display = 'block';
+                foroSection.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+
+    <!-- Scripts adicionales -->
+    <script src="ihc_tf/Public/Assets/Scripts/menu.js"></script>
+    <script src="ihc_tf/Public/Assets/Scripts/foro.js"></script>
 </body>
 
 </html>
+ 
