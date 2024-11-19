@@ -28,20 +28,7 @@
 }
 
 
-#voice-btn {
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    background-color: #4CAF50; /* Un color visible */
-    color: white; /* Contraste */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 10px;
-}
 
-#voice-btn:hover {
-    background-color: #45a049; /* Cambio de color al pasar el cursor */
-}
 
 .profile-photo{
     width: 150px; /* Ajusta el tamaño según necesites */
@@ -400,7 +387,20 @@ main {
     margin-bottom: 0.2rem;
 }
 
+#voice-btn {
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    background-color: #4CAF50; /* Un color visible */
+    color: white; /* Contraste */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+}
 
+#voice-btn:hover {
+    background-color: #45a049; /* Cambio de color al pasar el cursor */
+}
 
 
 @media screen and (max-width: 1200px) {
