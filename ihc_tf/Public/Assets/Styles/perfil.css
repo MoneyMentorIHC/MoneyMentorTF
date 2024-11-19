@@ -1,5 +1,6 @@
-/* Variables de color y estilos generales */
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
     --color-primary: #6C9BCF;
     --color-danger: #FF0060;
     --color-success: #1B9C85;
@@ -10,13 +11,17 @@
     --color-light: rgba(132, 139, 200, 0.18);
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
+
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
     --border-radius-2: 1.2rem;
+
     --card-padding: 1.8rem;
     --padding-1: 1.2rem;
+
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
+
 header {
     width: 100%; /* Ancho completo */
     height: 70px; /* Altura del encabezado */
@@ -321,7 +326,7 @@ h3 {
     
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 80vh;
     padding: 20px;
     display: flex;
     gap: 50px;
@@ -552,6 +557,61 @@ h3 {
     }
 
 }
+
+.historial {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.historial table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.historial table th, .historial table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.historial table .danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.historial table .success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.historial h2 {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.scroll-arrow h2 {
+    font-size: 1rem;
+}
+.scroll-arrow {
+    text-align: center;
+    z-index: 1000;
+}
+
+.arrow-link .material-icons-sharp {
+    text-decoration: none;
+    font-size: 5rem;
+    color: #1abc9c;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.arrow-link:hover {
+    color: #007bff;
+}
+
 
 /*ACTUALIZAR*/
 @media screen and (max-width: 1475px) {
