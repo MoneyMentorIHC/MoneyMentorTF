@@ -681,6 +681,12 @@ main .welcome .progresss .percentage{
     margin-bottom: 0.2rem;
 }
 
+.title {
+    text-align: center;
+    margin-top: -40px; /* Mueve el título más arriba */
+    margin-bottom: 10px; /* Espacio entre el título y el contenido */
+}
+
 .status {
     display: flex;
     flex-direction: column;
