@@ -18,3 +18,8 @@ darkMode.addEventListener('click', () => {
     darkMode.querySelector('span:nth-child(2)').classList.toggle('active');
 })
 
+// Selecciona el botón de lectura de voz
+
+
+
+

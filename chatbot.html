@@ -9,13 +9,11 @@
     <title>MoneyMentor</title>
      
     <script type="module">
-        
         import { CreateWebWorkerMLCEngine } from "https://esm.run/@mlc-ai/web-llm"
-
+    
         const $ = el => document.querySelector(el)
-
-        // pongo delante de la variable un símbolo de $
-        // para indicar que es un elemento del DOM
+    
+        // Selección de elementos del DOM
         const $form = $('form')
         const $input = $('input')
         const $template = $('#message-template')
@@ -24,12 +22,13 @@
         const $button = $('button')
         const $info = $('small')
         const $loading = $('.loading')
-
+        const voiceBtn = document.getElementById('voice-btn')
+    
         let messages = []
         let end = false
-
+    
         const SELECTED_MODEL = 'Llama-3-8B-Instruct-q4f32_1-MLC-1k'
-
+    
         const engine = await CreateWebWorkerMLCEngine(
             new Worker('ihc_tf/Public/Assets/Scripts/worker.js', { type: 'module' }),
             SELECTED_MODEL,
@@ -46,42 +45,63 @@
                 }
             }
         )
-
+    
+        // Función para leer el último mensaje del chatbot
+        voiceBtn.addEventListener('click', () => {
+            console.log('Botón presionado'); // Confirmación del clic
+    
+            // Selección del último mensaje del bot
+            const botMessages = document.querySelectorAll('.message.bot p'); // Selecciona mensajes del bot
+            const lastMessage = botMessages[botMessages.length - 1]?.textContent; // Último mensaje del bot
+    
+            if (lastMessage) {
+                console.log(`Leyendo: ${lastMessage}`); // Log del mensaje a leer
+    
+                // Uso de SpeechSynthesis API para leer el mensaje
+                const utterance = new SpeechSynthesisUtterance(lastMessage);
+                utterance.lang = 'es-ES'; // Idioma español
+                utterance.rate = 1; // Velocidad de lectura
+                utterance.pitch = 1; // Tono de lectura
+                speechSynthesis.speak(utterance); // Reproducir voz
+            } else {
+                alert('No hay mensajes del bot para leer.'); // Mensaje si no hay texto
+            }
+        });
+    
         $form.addEventListener('submit', async (event) => {
             event.preventDefault()
             const messageText = $input.value.trim()
-
+    
             if (messageText !== '') {
-                // añadimos el mensaje en el DOM
                 $input.value = ''
             }
-
+    
             addMessage(messageText, 'user')
             $button.setAttribute('disabled', '')
-
+    
             const userMessage = {
                 role: 'user',
                 content: messageText
             }
-
+    
             messages.push(userMessage)
-
+    
             const chunks = await engine.chat.completions.create({
                 messages,
                 stream: true
             })
-
+    
             let reply = ""
-
+    
             const $botMessage = addMessage("", 'bot')
-
+    
             for await (const chunk of chunks) {
                 const choice = chunk.choices[0]
                 const content = choice?.delta?.content ?? ""
                 reply += content
                 $botMessage.textContent = reply
             }
-
+    
             $button.removeAttribute('disabled')
             messages.push({
                 role: 'assistant',
@@ -89,26 +109,27 @@
             })
             $container.scrollTop = $container.scrollHeight
         })
-
+    
         function addMessage(text, sender) {
-            // clonar el template
+            // Clonar el template
             const clonedTemplate = $template.content.cloneNode(true)
             const $newMessage = clonedTemplate.querySelector('.message')
-
+    
             const $who = $newMessage.querySelector('span')
             const $text = $newMessage.querySelector('p')
-
+    
             $text.textContent = text
             $who.textContent = sender === 'bot' ? 'WAI' : 'Tú'
             $newMessage.classList.add(sender)
-
+    
             $messages.appendChild($newMessage)
-
+    
             $container.scrollTop = $container.scrollHeight
-
+    
             return $text
         }
     </script>
+    
 </head>
 <header>
     <div class="toggle">
@@ -254,7 +275,15 @@
                     </template>
                 </div>
             </section>
+
+            <button id="voice-btn">Lectura de Voz</button>
+
+           
         </main>
+        
+
+       
+
 
 
     </div>
