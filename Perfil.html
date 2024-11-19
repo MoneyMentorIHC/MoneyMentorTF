@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/perfil.css">
     <!-- Enlace a Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    
 </head>
 <header>
     <div class="toggle">
@@ -161,10 +162,47 @@
                     </form>
                 </div>
             </div>
+            <!-- Botón para mostrar el historial -->
+            <div class="scroll-arrow">
+                <h2>Ver historial de actividades</h2>
+                <a id="show-historial" class="arrow-link">
+                    <span class="material-icons-sharp">keyboard_arrow_down</span>
+                </a>
+            </div>
+            
+            <!-- Sección del Historial de Actividades -->
+            <div id="historial" class="historial" style="display: none;">
+                <h1>Historial de actividades</h1>
+                <p>Ingresa tus ingresos y egresos. Organiza tus finanzas de manera efectiva y haz un seguimiento de tu progreso hacia el éxito financiero.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Monto</th>
+                            <th>Fecha de Ingreso</th>
+                            <th>Total ahorrado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historial-body">
+                        <!-- Contenido dinámico con JavaScript -->
+                    </tbody>
+                </table>
+                <div class="scroll-arrow">
+                    <h2>Regresar al perfil</h2>
+                    <a id="return-profile" class="arrow-link">
+                        <span class="material-icons-sharp">keyboard_arrow_up</span>
+                    </a>
+                </div>
+            </div>
+
         </main>
     </div>
 
+    
+
     <!-- Scripts -->
     <script src="ihc_tf/Public/Assets/Scripts/menu.js"></script>
+    <script src="ihc_tf/Public/Assets/Scripts/perfil.js"></script>
+
 </body>
 </html>
