@@ -9,140 +9,40 @@
     <link rel="stylesheet" href="ihc_tf/Public/Assets/Styles/perfil.css">
     <!-- Enlace a Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-
-        .hamburger-menu {
-            display: none; /* Inicialmente oculto, solo visible en pantallas pequeñas */
-        }
-
-        .hamburger-icon {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 30px;
-            height: 25px;
-        }
-
-        .hamburger-icon .bar {
-            background-color: #333;
-            height: 4px;
-            width: 100%;
-            border-radius: 5px;
-        }
-
-        /* Medias Queries para Responsividad */
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block; /* Mostrar el icono en pantallas pequeñas */
-            }
-
-            .sidebar {
-                display: none; /* Ocultar la barra lateral en pantallas pequeñas */
-            }
-
-            .sidebar.active {
-                display: block; /* Mostrar la barra lateral cuando tenga la clase 'active' */
-            }
-        }
-
-        /* Medias Queries para Responsividad */
-        @media (max-width: 768px) {
-            .container {
-                display: block; /* Para pantallas más pequeñas, colocar todo en una sola columna */
-            }
-
-            aside {
-                width: 100%; /* Hacer la barra lateral más pequeña */
-                display: none; /* Ocultar la barra lateral en móviles */
-            }
-
-            main {
-                width: 100%;
-            }
-
-            .containerProfile {
-                display: block;
-                padding: 10px;
-            }
-
-            .profile-details, .edit-details {
-                width: 100%;
-                margin: 10px 0;
-            }
-
-            .profile-image {
-                width: 120px; /* Ajustar el tamaño de la imagen de perfil */
-                height: 120px;
-                margin: 0 auto;
-            }
-
-            .profile-details h2 {
-                font-size: 1.5rem;
-                text-align: center;
-            }
-
-            .profile-details p, .edit-details label {
-                font-size: 1rem;
-            }
-
-            .form-group input {
-                width: calc(100% - 30px); /* Asegurar que los inputs ocupen todo el espacio disponible */
-            }
-
-            .form-group button {
-                display: block;
-                margin-top: 5px;
-                width: 100%;
-            }
-
-            .sidebar {
-                display: none; /* No mostrar la barra lateral en pantallas pequeñas */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .profile-image {
-                width: 100px;
-                height: 100px;
-            }
-
-            .profile-details h2 {
-                font-size: 1.2rem;
-            }
-
-            .form-group input, .form-group button {
-                font-size: 0.9rem;
-            }
-
-            .profile-details p {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
 </head>
-<body>
-    <!-- Mueve el header dentro del body -->
-    <div class="container">
-        <!-- Sección para el menú hamburguesa -->
-        <div class="hamburger-menu">
-            <button id="hamburger-icon" class="hamburger-icon">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+<header>
+    <div class="toggle">
+        <div class="logo">
+            <img src="ihc_tf/Public/Assets/Img/logocortado.png">
+        </div>
+    </div>
+    <h2></h2>
+
+<!-- Right Section -->
+<div class="right-section">
+    <div class="nav">
+        <div class="profile">
+            <div class="info">
+                <p>Hola, <b><span id="username-display"></span></b></p>
+                <small class="text-muted">perfil</small>
+            </div>
+            <div class="profile-photo">
+                <img src="ihc_tf/Public/Assets/Img/daf.jpg">
+            </div>
         </div>
 
-        <!-- Sección lateral izquierda (barra de navegación) -->
+    </div>
+    <!-- final  Nav -->
+</header>
+<body>
+    <!-- Mueve el header dentro del body -->
+    
+
+    <div class="container">
+        <!-- Sección lateral izquierda -->
         <aside>
             <div class="sidebar">
-                <a href="menu.html" id="inicio_sidebar">
+                <a href="#" id="inicio_sidebar">
                     <span class="material-icons-sharp">
                         home
                     </span>
@@ -174,7 +74,7 @@
                     <h3>Gestion</h3>
                     <span class="message-count"></span>
                 </a>
-                <a href="metas.html">
+                <a href="Metas.html">
                     <span class="material-icons-sharp">
                         task
                     </span>
@@ -186,7 +86,7 @@
                     </span>
                     <h3>Consejos</h3>
                 </a>
-                <a href="foro.html">
+                <a href="Foro.html">
                     <span class="material-icons-sharp">
                         rate_review
                     </span>
@@ -199,7 +99,7 @@
                     <h3>Perfil</h3>
                 </a>
 
-                <a href="index.html">
+                <a href="#">
                     <span class="material-icons-sharp">
                         logout
                     </span>
@@ -214,7 +114,7 @@
                 <!-- Sección de perfil a la izquierda -->
                 <div class="profile-details">
                     <img src="ihc_tf/Public/Assets/Img/daf.jpg" alt="Profile Picture" class="profile-image">
-                    <h2>Danna Alvarez</h2>
+                    <span id="username-display"></span>
                     <p><i class="fas fa-calendar-alt"></i> User since 2021</p>
                     <p><i class="fas fa-envelope"></i> AndreowJS@gmail.com</p>
                     <p><i class="fas fa-phone"></i> +51 940 163 699</p>
@@ -265,15 +165,6 @@
     </div>
 
     <!-- Scripts -->
-    <script>
-        // Obtener el icono del menú hamburguesa y la barra lateral
-        const hamburgerIcon = document.getElementById('hamburger-icon');
-        const sidebar = document.querySelector('.sidebar');
-
-        // Agregar un evento para alternar la visibilidad de la barra lateral
-        hamburgerIcon.addEventListener('click', () => {
-            sidebar.classList.toggle('active'); // Alternar la clase 'active'
-        });
-    </script>
+    <script src="ihc_tf/Public/Assets/Scripts/menu.js"></script>
 </body>
 </html>
