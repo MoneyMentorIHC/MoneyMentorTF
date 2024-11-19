@@ -1,27 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-:root {
-    --color-primary: #6C9BCF;
-    --color-danger: #FF0060;
-    --color-success: #1B9C85;
-    --color-warning: #F7D060;
-    --color-white: #fff;
-    --color-info-dark: #7d8da1;
-    --color-dark: #363949;
-    --color-light: rgba(132, 139, 200, 0.18);
-    --color-dark-variant: #677483;
-    --color-background: #f6f6f9;
+:root{
+    /* Colores principales */
+    --color-primary: #6C9BCF; /* Color primario */
+    --color-danger: #FF0060; /* Color para errores */
+    --color-success: #1B9C85; /* Color para éxito */
+    --color-warning: #F7D060; /* Color para advertencias */
+    --color-white: #fff; /* Color blanco */
+    --color-info-dark: #7d8da1; /* Color para información oscura */
+    --color-dark: #363949; /* Color oscuro */
+    --color-light: rgba(132, 139, 200, 0.18); /* Color claro con opacidad */
+    --color-dark-variant: #677483; /* Variante de color oscuro */
+    --color-background: #f6f6f9; /* Color de fondo */
+    --color-background2: #E8E8E8; /* Color de fondo */
+    /* Radii y padding para las tarjetas */
+    --card-border-radius: 2rem; /* Radio de borde de las tarjetas */
+    --border-radius-1: 0.4rem; /* Radio de borde 1 */
+    --border-radius-2: 1.2rem; /* Radio de borde 2 */
+    
+    /* Padding para las tarjetas */
+    --card-padding: 1.8rem; /* Padding para tarjetas */
+    --padding-1: 1.2rem; /* Padding 1 */
 
-    --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 1.2rem;
+    /* Sombra de cajas */
+    --box-shadow: 0 2rem 3rem var(--color-light); /* Sombra para cajas */
 
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-
-    --box-shadow: 0 2rem 3rem var(--color-light);
 }
- 
+
 .profile-photo{
     width: 150px; /* Ajusta el tamaño según necesites */
     height: 150px;
@@ -72,7 +77,8 @@ header h2 {
 
 .dark-mode-variables {
     --color-background: #181a1e;
-    --color-white: #202528;
+    --color-background2: #3c3d41;
+    --color-white: #d5dce0;
     --color-dark: #edeffd;
     --color-dark-variant: #a3bdcc;
     --color-light: rgba(0, 0, 0, 0.4);
@@ -310,7 +316,8 @@ main {
     display: none;
 }
 
-.right-section .dark-mode {
+
+.right-section .dark-mode{
     background-color: var(--color-light);
     display: flex;
     justify-content: space-between;
@@ -321,7 +328,7 @@ main {
     border-radius: var(--border-radius-1);
 }
 
-.right-section .dark-mode span {
+.right-section .dark-mode span{
     font-size: 1.2rem;
     width: 50%;
     height: 100%;
@@ -330,12 +337,11 @@ main {
     justify-content: center;
 }
 
-.right-section .dark-mode span.active {
+.right-section .dark-mode span.active{
     background-color: var(--color-primary);
-    color: white;
     border-radius: var(--border-radius-1);
 }
-
+ 
 .right-section .nav .profile {
     display: flex;
     gap: 2rem;
@@ -586,7 +592,7 @@ main {
 }
 
 .assistant {
-    background-color: #E8E8E8;
+    background-color: var(--color-background2);
     padding: 5%;
     border-radius: 10px;
     height: 90%; 
@@ -597,7 +603,7 @@ main {
 }
 
 .chatbox {
-    background-color: #ffffff;
+    background-color:var(--color-background);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
@@ -668,7 +674,7 @@ main {
     width: 100%;
     max-width: 100%;
     height: 50vh; 
-    background: #fff;
+    background:var(--color-background);
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
