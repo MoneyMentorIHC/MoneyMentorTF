@@ -262,6 +262,7 @@ html{
 
 body{
     width: 100vw;
+    height: 400vh;
     font-family: 'Poppins', sans-serif;
     font-size: 0.88rem;
     user-select: none;
